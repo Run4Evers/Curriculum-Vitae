@@ -17,39 +17,39 @@
     <b><p2>Riverside Technologies</p2> </b>
   
 ## Certifications and Education
-  <b>.NET Application Development with C# </b>
- <b> Tensorflow for ML Applications by Google  </b>
-  <b>Python in RPA Development by Coursera </b>
-  <b>Power Automate by Microsoft </b>
+  <br>.NET Application Development with C# </br>
+ <br> Tensorflow for ML Applications by Google  </br>
+  <br>Python in RPA Development by Coursera </br>
+  <br>Power Automate by Microsoft </br>
   
 #Inventions and Patents
-  <b>CoolAir - Patent Page upload pending </b>
-  <b>EQ - Quit Vape for Nicotine Addiction </b>
- <b> AirBox - Personal Cooling Device "Later beaten by Sony's Reon cooler"  </b>
+  <br>CoolAir - Patent Page upload pending </br>
+  <br>EQ - Quit Vape for Nicotine Addiction </br>
+ <br> AirBox - Personal Cooling Device "Later beaten by Sony's Reon cooler"  </br>
  
   
 #Side Projects 
- <b>3D printing Resin Molds  </b>
- <b>3D printing for Aluminum mold castings </b>
- <b>CoolHat </b>
- <b>Minecraft Server(s) </b>
+ <br>3D printing Resin Molds  </br>
+ <br>3D printing for Aluminum mold castings </br>
+ <br>CoolHat </br>
+ <br>Minecraft Server(s) </br>
   
 ### Other Skillsets
-  <p>Japanese JLPT level 2  </b>
-  <b> Fusion 360  </b>
-  <b>Eagle By AutoDesk 360  </b>
-  <b>PCB Design and assembly  </b>**Test**
+  <pr>Japanese JLPT level 2  </br>
+  <br> Fusion 360  </br>
+  <br>Eagle By AutoDesk 360  </br>
+  <br>PCB Design and assembly  </br>**Test**
   
 ##** News Apperances **
     
-<b>[WNKY](https://www.wnky.com/students-with-ties-to-wku-create-own-tech-company/) | [BG Daily](https://www.wnky.com/students-with-ties-to-wku-create-own-tech-company/) | [WKU_Herald](https://www.wnky.com/students-with-ties-to-wku-create-own-tech-company/)
+<br>[WNKY](https://www.wnky.com/students-with-ties-to-wku-create-own-tech-company/) | [BG Daily](https://www.wnky.com/students-with-ties-to-wku-create-own-tech-company/) | [WKU_Herald](https://www.wnky.com/students-with-ties-to-wku-create-own-tech-company/)
                                                                                
     
 ##Live Demo! 
-<b>*Future insert of the live code demonstrations will go here.  </b>
+<br>*Future insert of the live code demonstrations will go here.  </br>
 
 
-<b>###*Future Content Here* </b>
+<br>###*Future Content Here* </br>
     
-<b>Credits </b>
-  <b>CV Inspiration<sup>Thank you to @Carolstran for the inspiration in this webpage!</sup> </b>
+<br>Credits </br>
+  <br>CV Inspiration<sup>Thank you to @Carolstran for the inspiration in this webpage!</sup> </br>
