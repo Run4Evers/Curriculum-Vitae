@@ -6,7 +6,7 @@
 
 
 <p align="center">
-  <img width="200" src="https://github.com/Run4Evers/Curriculum-Vitae/blob/gh-pages/BioTek%20Logo%202.0%20(1).png" alt="Logo">
+  <img width="200" src="https://github.com/Run4Evers/Curriculum-Vitae/blob/gh-pages/BioTekLogo(1).png" alt="Logo">
 </p>
 
 
