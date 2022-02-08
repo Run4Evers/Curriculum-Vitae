@@ -1,12 +1,7 @@
 ### Jacob Haskamps CV
 💻🔨
+![TestImage](https://github.com/Run4Evers/Curriculum-Vitae/blob/gh-pages/BioTek%20Logo%202.0%20(1).png)
 
-
-<style>
-div {
-  ![TestImage](https://github.com/Run4Evers/Curriculum-Vitae/blob/gh-pages/BioTek%20Logo%202.0%20(1).png)
-}
-</style>
 
 <br><br>
 
