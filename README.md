@@ -1,7 +1,7 @@
 ### Jacob Haskamps CV
 💻🔨
 
-![TestImage](/Sketch (8).png)
+![TestImage](https://github.com/Run4Evers/Curriculum-Vitae/blob/gh-pages/Sketch%20(8).png?raw=true)
 
 <br><br>
 
