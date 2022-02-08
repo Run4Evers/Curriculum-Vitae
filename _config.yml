@@ -1,3 +1,6 @@
 theme: jekyll-theme-slate
-title: This is my Resume / Life Progress Report!
-description: Jacob Haskamps CV, thank you to Carolyn Stransky for the help in making this presentable!
+title: Welcome to my Profile! ~~~
+description: Jacob Haskamps CV
+Here's a sentence with a footnote. [^1]
+
+[^1]: This is the footnote.thank you to Carolyn Stransky for the help in making this presentable!
