@@ -5,12 +5,13 @@
 <br>
 </h1>
 
+<p1> Note that this is still very much a work in progress! Last updated 2/8/22</p1> 
+
+
+
 <p align="center">
   <img width="200" src="https://run4evers.github.io/Curriculum-Vitae/BioTek%20Logo%202.0%20(1).png" alt="Logo">
 </p>
-
-
-
 
 
 <br><br>
@@ -78,4 +79,4 @@
   <br>CV Inspiration<sup>Thank you to @Carolstran for the inspiration in this webpage!</sup> </br>
 <br><br>
 
-![TestImage](https://github.com/Run4Evers/Curriculum-Vitae/blob/gh-pages/BioTek%20Logo%202.0%20(1).png)
+
