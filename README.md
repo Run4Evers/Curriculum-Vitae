@@ -3,7 +3,7 @@
 <br>
 💻🔨🔨
 <br>
-
+</h1>
 
 <p align="center">
   <img width="200" src="https://run4evers.github.io/Curriculum-Vitae/BioTek%20Logo%202.0%20(1).png" alt="Logo">
