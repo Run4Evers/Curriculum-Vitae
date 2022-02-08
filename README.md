@@ -11,8 +11,10 @@
   <b>Inventory Management Design and Implementation 
   
 ## Technical Experiences
-  <b>Junoir Network Administrator: 3 Years
+  <b>Junoir Network Administrator: 3 Years (2019-Present)
+    <b><p2>Comprehensive Medical Management</p2> 
   <b>IT HelpDesk: 1 Year 
+    <b><p2>Riverside Technologies</p2>
   
 ## Certifications and Education
   <b>.NET Application Development with C#
@@ -38,16 +40,16 @@
   <b>Eagle By AutoDesk 360 
   <b>PCB Design and assembly 
   
-  
-### News Articles 
+##** News Apperances **
     
-<b>[WNKY](https://www.wnky.com/students-with-ties-to-wku-create-own-tech-company/)| [BG Daily](https://www.wnky.com/students-with-ties-to-wku-create-own-tech-company/) | [WKU_Herald](https://www.wnky.com/students-with-ties-to-wku-create-own-tech-company/)
+<b>[WNKY](https://www.wnky.com/students-with-ties-to-wku-create-own-tech-company/) | [BG Daily](https://www.wnky.com/students-with-ties-to-wku-create-own-tech-company/) | [WKU_Herald](https://www.wnky.com/students-with-ties-to-wku-create-own-tech-company/)
                                                                                
     
 ##Live Demo! 
-[Website](https://workwithcarolyn.com/)
+*Future insert of the live code demonstrations will go here. 
 
 
 *Future Content Here*
     
-Credits<sup>Thank you to @Carolstran for the inspiration in this webpage!</sup>
+Credits
+  <b>CV Inspiration<sup>Thank you to @Carolstran for the inspiration in this webpage!</sup>
