@@ -1,5 +1,5 @@
 <h1 align="center">Jacob Haskamps CV</h1>
-
+<hr style="border-style: dotted" />
 <br>
 💻🔨🔨
 <br>
@@ -8,6 +8,8 @@
 <p align="center">
   <img width="200" src="https://github.com/Run4Evers/Curriculum-Vitae/blob/gh-pages/BioTek%20Logo%202.0%20(1).png" alt="Material Bread logo">
 </p>
+
+
 ![TestImage](https://github.com/Run4Evers/Curriculum-Vitae/blob/gh-pages/BioTek%20Logo%202.0%20(1).png)
 
 
