@@ -1,4 +1,5 @@
 ### Jacob Haskamps CV
+💻🔨
 <br><br>
 
 <b> IT Specialist with Network, Hardware, and Software specializations. </b>
@@ -46,7 +47,7 @@
   <br>Japanese: JLPT level 2  </br>
   <br> Fusion 360  </br>
   <br>Eagle By AutoDesk 360  </br>
-  <br>PCB Design and assembly  </br>**Test**
+  <br>PCB Design and assembly  </br>
 <br><br>  
 
 <h3>** News Apperances **</h3>
