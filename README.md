@@ -15,11 +15,11 @@
 
 <br><br>
 
-<b> IT Specialist with Network, Hardware, and Software specializations. </b>
+<b> Application, Software, Network, and Hardware Developer. </b>
 
 <h3>Contact and Socials</h3>   
 
-[Email](mailto:ejakehaskamp@gmail.com) | [LinkedIn](website: www.google.com) | [GitHub](www.google.com)
+[Email](mailto:ejakehaskamp@gmail.com) | [GitHub](https://run4evers.github.io/Curriculum-Vitae/)
 <br><br>  
 
 <h3>Biggest Projects</h3>
