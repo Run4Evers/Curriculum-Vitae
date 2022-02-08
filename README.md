@@ -1,5 +1,7 @@
- <h1 align="center" Jacob Haskamps CV</h1>
+<h1 align="center" Jacob Haskamps CV</h1>
+<br>
 💻🔨🔨
+<br>
 ![TestImage](https://github.com/Run4Evers/Curriculum-Vitae/blob/gh-pages/BioTek%20Logo%202.0%20(1).png)
 
 
