@@ -5,14 +5,14 @@
 [Email](mailto:ejakehaskamp@gmail.com)
   
 ## Biggest Projects
-  <b>Machine Learning  </b>
-  <b>Custom C++ Firmware  </b>
-  <b>Screen Capture software with Powershell </b>
-  <b>Inventory Management Design and Implementation  </b>
+  <br>Machine Learning  </br>
+  <br>Custom C++ Firmware  </br>
+  <br>Screen Capture software with Powershell </br>
+  <br>Inventory Management Design and Implementation  </br>
   
 ## Technical Experiences
-  <b>Junoir Network Administrator: 3 Years (2019-Present) </b>
-    <b><p2>Comprehensive Medical Management</p2>  </b>
+  <br>Junoir Network Administrator: 3 Years (2019-Present) </br>
+    <br><p2>Comprehensive Medical Management</p2>  </br>
   <b>IT HelpDesk: 1 Year  </b>
     <b><p2>Riverside Technologies</p2> </b>
   
