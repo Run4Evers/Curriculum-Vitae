@@ -1,4 +1,6 @@
-### Jacob Haskamps CV
+h1 {text-align: center;}
+
+<h1> Jacob Haskamps CV </h1>
 💻🔨
 ![TestImage](https://github.com/Run4Evers/Curriculum-Vitae/blob/gh-pages/BioTek%20Logo%202.0%20(1).png)
 
