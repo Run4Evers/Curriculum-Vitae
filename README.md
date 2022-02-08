@@ -5,6 +5,7 @@
 <b> IT Specialist with Network, Hardware, and Software specializations. </b>
 
 <h3>Contact and Socials</h3>   
+
 [Email](mailto:ejakehaskamp@gmail.com) | [LinkedIn](website: www.google.com) | [GitHub](www.google.com)
 <br><br>  
 
@@ -51,7 +52,7 @@
 <br><br>  
 
 <h3>** News Apperances **</h3>
-<br>[WNKY](https://www.wnky.com/students-with-ties-to-wku-create-own-tech-company/) | [BG Daily](https://www.wnky.com/students-with-ties-to-wku-create-own-tech-company/) | [WKU_Herald](https://www.wnky.com/students-with-ties-to-wku-create-own-tech-company/)
+[WNKY](https://www.wnky.com/students-with-ties-to-wku-create-own-tech-company/) | [BG Daily](https://www.wnky.com/students-with-ties-to-wku-create-own-tech-company/) | [WKU_Herald](https://www.wnky.com/students-with-ties-to-wku-create-own-tech-company/)
                                                                                
 <br><br>    
 <h3>Live Demo!</h3>
