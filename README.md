@@ -41,9 +41,7 @@
   
 ### News Articles 
     
-[WNKY](https://www.wnky.com/students-with-ties-to-wku-create-own-tech-company/)
-[BG Daily](https://www.wnky.com/students-with-ties-to-wku-create-own-tech-company/)
-[WKU_Herald](https://www.wnky.com/students-with-ties-to-wku-create-own-tech-company/)
+<b>[WNKY](https://www.wnky.com/students-with-ties-to-wku-create-own-tech-company/)| [BG Daily](https://www.wnky.com/students-with-ties-to-wku-create-own-tech-company/) | [WKU_Herald](https://www.wnky.com/students-with-ties-to-wku-create-own-tech-company/)
                                                                                
     
 ##Live Demo! 
