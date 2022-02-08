@@ -6,11 +6,11 @@
 
 
 <p align="center">
-  <img width="200" src="https://github.com/Run4Evers/Curriculum-Vitae/blob/gh-pages/BioTek%20Logo%202.0%20(1).png" alt="Material Bread logo">
+  <img width="200" src="https://github.com/Run4Evers/Curriculum-Vitae/blob/gh-pages/BioTek%20Logo%202.0%20(1).PNG" alt="Logo">
 </p>
 
 
-![TestImage](https://github.com/Run4Evers/Curriculum-Vitae/blob/gh-pages/BioTek%20Logo%202.0%20(1).png)
+
 
 
 <br><br>
@@ -77,3 +77,5 @@
 <p1>##Credits </p>
   <br>CV Inspiration<sup>Thank you to @Carolstran for the inspiration in this webpage!</sup> </br>
 <br><br>
+
+![TestImage](https://github.com/Run4Evers/Curriculum-Vitae/blob/gh-pages/BioTek%20Logo%202.0%20(1).png)
