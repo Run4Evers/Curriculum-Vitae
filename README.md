@@ -52,7 +52,7 @@
 <br><br>  
 
 <h3>** News Apperances **</h3>
-[WNKY](https://www.wnky.com/students-with-ties-to-wku-create-own-tech-company/) | [BG Daily](https://www.wnky.com/students-with-ties-to-wku-create-own-tech-company/) | [WKU_Herald](https://www.wnky.com/students-with-ties-to-wku-create-own-tech-company/)
+[WNKY](https://www.wnky.com/students-with-ties-to-wku-create-own-tech-company) | [BG Daily](https://www.wnky.com/students-with-ties-to-wku-create-own-tech-company/) | [WKU_Herald](https://www.wnky.com/students-with-ties-to-wku-create-own-tech-company/)
                                                                                
 <br><br>    
 <h3>Live Demo!</h3>
