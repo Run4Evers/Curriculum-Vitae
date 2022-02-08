@@ -5,40 +5,40 @@
 [Email](mailto:ejakehaskamp@gmail.com)
   
 ## Biggest Projects
-  <b>Machine Learning 
-  <b>Custom C++ Firmware 
-  <b>Screen Capture software with Powershell
-  <b>Inventory Management Design and Implementation 
+  <b>Machine Learning  </b>
+  <b>Custom C++ Firmware  </b>
+  <b>Screen Capture software with Powershell </b>
+  <b>Inventory Management Design and Implementation  </b>
   
 ## Technical Experiences
-  <b>Junoir Network Administrator: 3 Years (2019-Present)
-    <b><p2>Comprehensive Medical Management</p2> 
-  <b>IT HelpDesk: 1 Year 
-    <b><p2>Riverside Technologies</p2>
+  <b>Junoir Network Administrator: 3 Years (2019-Present) </b>
+    <b><p2>Comprehensive Medical Management</p2>  </b>
+  <b>IT HelpDesk: 1 Year  </b>
+    <b><p2>Riverside Technologies</p2> </b>
   
 ## Certifications and Education
-  <b>.NET Application Development with C#
- <b> Tensorflow for ML Applications by Google 
-  <b>Python in RPA Development by Coursera
-  <b>Power Automate by Microsoft
+  <b>.NET Application Development with C# </b>
+ <b> Tensorflow for ML Applications by Google  </b>
+  <b>Python in RPA Development by Coursera </b>
+  <b>Power Automate by Microsoft </b>
   
 #Inventions and Patents
-  <b>CoolAir - Patent Page upload pending
-  <b>EQ - Quit Vape for Nicotine Addiction
- <b> AirBox - Personal Cooling Device "Later beaten by Sony's Reon cooler" 
+  <b>CoolAir - Patent Page upload pending </b>
+  <b>EQ - Quit Vape for Nicotine Addiction </b>
+ <b> AirBox - Personal Cooling Device "Later beaten by Sony's Reon cooler"  </b>
  
   
 #Side Projects 
- <b>3D printing Resin Molds 
- <b>3D printing for Aluminum mold castings
- <b>CoolHat
- <b>Minecraft Server(s)
+ <b>3D printing Resin Molds  </b>
+ <b>3D printing for Aluminum mold castings </b>
+ <b>CoolHat </b>
+ <b>Minecraft Server(s) </b>
   
 ### Other Skillsets
-  <p>Japanese JLPT level 2 
-  <b> Fusion 360 
-  <b>Eagle By AutoDesk 360 
-  <b>PCB Design and assembly 
+  <p>Japanese JLPT level 2  </b>
+  <b> Fusion 360  </b>
+  <b>Eagle By AutoDesk 360  </b>
+  <b>PCB Design and assembly  </b>**Test**
   
 ##** News Apperances **
     
@@ -46,10 +46,10 @@
                                                                                
     
 ##Live Demo! 
-*Future insert of the live code demonstrations will go here. 
+<b>*Future insert of the live code demonstrations will go here.  </b>
 
 
-*Future Content Here*
+<b>###*Future Content Here* </b>
     
-Credits
-  <b>CV Inspiration<sup>Thank you to @Carolstran for the inspiration in this webpage!</sup>
+<b>Credits </b>
+  <b>CV Inspiration<sup>Thank you to @Carolstran for the inspiration in this webpage!</sup> </b>
