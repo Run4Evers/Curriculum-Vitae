@@ -1,4 +1,4 @@
-<h1>Jacob Haskamps CV</h1>
+<h1 align="center">Jacob Haskamps CV</h1>
 
 <br>
 💻🔨🔨
