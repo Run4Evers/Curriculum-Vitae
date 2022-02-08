@@ -34,7 +34,7 @@
  <br> AirBox - Personal Cooling Device "Later beaten by Sony's Reon cooler"  </br>
  <br><br>
  
-<h3>Side Projects<h3>
+<h3>Side Projects</h3>
  <br>3D printing Resin Molds  </br>
  <br>3D printing for Aluminum mold castings </br>
  <br>CoolHat </br>
