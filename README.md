@@ -22,3 +22,5 @@
 ##Live Demo! 
 
 *Future Content Here*
+    
+Credits<sup>Thank you to @Carolstran for the inspiration in this webpage!</sup>
