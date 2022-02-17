@@ -1,0 +1,644 @@
+Process: 
+
+
+1. Gather Screenshots of users PC and send to a server
+2. Utilize trained models to identify the onscreen activities. 
+3. Gather data for predictions and processing via Power BI. 
+
+1. Gather Screenshots code Example in Powershell: 
+
+$i=1
+while($i=1)
+{
+sleep 1 
+Add-Type -AssemblyName System.Windows.Forms,System.Drawing
+
+$screens = [Windows.Forms.Screen]::AllScreens
+
+$top    = ($screens.Bounds.Top    | Measure-Object -Minimum).Minimum
+$left   = ($screens.Bounds.Left   | Measure-Object -Minimum).Minimum
+$width  = ($screens.Bounds.Right  | Measure-Object -Maximum).Maximum
+$height = ($screens.Bounds.Bottom | Measure-Object -Maximum).Maximum
+
+$bounds   = [Drawing.Rectangle]::FromLTRB($left, $top, $width, $height)
+$bmp      = New-Object System.Drawing.Bitmap ([int]$bounds.width), ([int]$bounds.height)
+$graphics = [Drawing.Graphics]::FromImage($bmp)
+
+$graphics.CopyFromScreen($bounds.Location, [Drawing.Point]::Empty, $bounds.size)
+Set-Variable -Name "filepath" -Value ("C:\Users\")
+Set-Variable -Name "filepath2" -Value ($env:UserName)
+Set-Variable -Name "filetype" -Value (".png")
+Set-Variable -Name "user" -Value ($env:UserName)
+Set-Variable -Name "filepath3" -Value ("\AppData\Tensor\")
+Set-Variable -Name "PC" -Value ($env:ComputerName)
+Set-Variable -Name "hyphen" -Value ("-")
+Set-Variable -Name "time" -Value (Get-Date -Format "ddddMM-dd-yyyyHH-mm-ss")
+Set-Variable -Name "filetype2" -Value (".txt")
+
+$t3 = $rnumber = Get-Random -Minimum 0 -Maximum 100000000
+Set-Variable -Name "test2" -Value ($t3)
+
+
+Set-Variable -Name "under" -Value ("_")
+
+$bmp.Save($filepath + $filepath2 + $filepath3 + $user + $hyphen + $PC + $time + $under + $test2 + $filetype)
+
+$graphics.Dispose()
+$bmp.Dispose()
+
+
+Start-Transcript -Path "$filepath$filepath2$filepath3$user$hyphen$PC$time$under$test2$filetype2" -NoClobber
+$Process = Get-Process | Where-Object {$_.mainWindowTitle}
+Add-Type -AssemblyName System.Windows.Forms
+
+$X = [System.Windows.Forms.Cursor]::Position.X
+$Y = [System.Windows.Forms.Cursor]::Position.Y
+
+Write-Output "X: $X | Y: $Y"
+
+  foreach ($proc in $Process)
+  {
+    Add-Type -AssemblyName UIAutomationClient
+    [System.Windows.Automation.AutomationElement]::FromHandle($proc.MainWindowHandle).Current |
+    Select-Object -Property Name, HasKeyboardFocus, IsOffscreen, BoundingRectangle, NativeWindowHandle, ProcessId, Orientation, FrameworkId
+  }
+Stop-Transcript
+
+}
+
+
+
+
+2. Process Data
+
+2A. Move the Data Example, censored code for privacy. 
+
+from watchdog.events import FileSystemEventHandler
+from pathlib import Path, PureWindowsPath
+from watchdog.observers import Observer
+from datetime import datetime
+import shutil
+import time
+import sys
+import os 
+import logging
+#startTime = datetime.now()
+
+
+def RunSort():
+    class Watcher:
+
+        def __init__(self, directory="D:\\Dump", handler=FileSystemEventHandler()):
+            self.observer = Observer()
+            self.handler = handler
+            self.directory = directory
+        #Now calling the observer
+        def run(self):
+            self.observer.schedule(
+            self.handler, self.directory, recursive=True)
+            self.observer.start()
+            print("\nWatcher Running in {}/\n".format(self.directory))
+            print("Watcher is now running, begin the purge.")
+            try:
+                while True:
+                    time.sleep(1)
+            except:
+                self.observer.stop()
+            self.observer.join()
+            print("\nWatcher Terminated\n")   
+
+#Setting up the Handler, which is what to do in response to the event. 
+    class MyHandler(FileSystemEventHandler):
+
+        def on_any_event(self, event):
+            print(event) # Your code here
+            files = []
+            for dirname, dirnames, filenames in os.walk('D:\\Dump'):
+    # print path to all subdirectories first.
+                for subdirname in dirnames:
+                    files.append(os.path.join(dirname, subdirname))
+    # print path to all filenames.
+            for filename in filenames:
+                    files.append(os.path.join(dirname, filename))
+    #Move the files in Dump over to Sort. 
+            b = 0
+        #logger1 = []
+       
+            for x in range (len(files)):
+                username = files[b].split('\\')[2]
+                username2 = username.split('-')[0]
+                source = files[b]
+                destination = 'E:\\Sorted\\' + username2
+                new_path = shutil.move(source, destination)
+                print(new_path)
+            #logger1.append(datetime.now())
+            #logger1.append(files[b])
+                b = b + 1
+            #logger.info(logger1) 
+            
+    
+    w = Watcher(".", MyHandler())
+    w.run()
+    print("Watcher Is terminated.")
+   
+RunSort()
+    
+2B. Another way to grab the files: 
+
+from pathlib import Path, PureWindowsPath
+import os 
+import shutil
+from pprint import pprint 
+from datetime import datetime
+import numpy as np
+from numpy.core.numeric import indices
+from numpy.lib.shape_base import apply_along_axis
+import pandas as pd
+from pandas.core.algorithms import value_counts
+
+
+
+startTime = datetime.now()
+
+files = []
+for dirname, dirnames, filenames in os.walk('######REDACTED###########REDACTED#####'):
+    # print path to all subdirectories first.
+    for subdirname in dirnames:
+        files.append(os.path.join(dirname, subdirname))
+
+    # print path to all filenames.
+    for filename in filenames:
+        files.append(os.path.join(dirname, filename))
+
+#Lets grab the first 450 files, which is equal to 5 minutes of file collection
+files2 = files
+#files2 = files[0:450] to grab the first X Number of them (0:450 will pull exactly 450 despite the index being off by 1)
+#Now make a new list that is the first 450 files w/o their extensions. 
+files3 = []
+start = 0
+for file in files2:
+    files3.append(files2[start][:-4])
+    start = start + 1
+
+#Ok cool, now get the unique values in that list. 
+unique_files = []
+# Get a tuple of unique values & their frequency in numpy array
+uniqueValues, occurCount = np.unique(files3, return_counts=True)
+#print(np.unique(files3, return_counts=True))
+listOfUniqueValues = zip(uniqueValues, occurCount)
+# Iterate over the zip object, note that elem[0] is the file name, elem[1] is the occurences
+for elem in listOfUniqueValues:
+   if elem[1] == 1:
+       unique_files.append(elem[0])
+#print(unique_files)
+
+######REDACTED#####
+######REDACTED#####
+######REDACTED#####
+######REDACTED#####
+######REDACTED#####
+######REDACTED#####
+######REDACTED#####
+######REDACTED#####
+######REDACTED#####
+
+
+######REDACTED#####
+######REDACTED#####
+######REDACTED#####
+#GREAT, now remove any duplicate items in unique_files from files2
+begin = -1
+begin2 = 0
+text = (".txt")
+pic = (".png")
+files4 = []
+
+for y in range (len(unique_files)):
+    begin = begin + 1
+    begin2 = 0
+    for x in range (len(files2)): 
+        if (unique_files[begin]+(text)) == files2[begin2]:
+            files4.append(unique_files[begin]+(text))
+            files2.remove(unique_files[begin]+(text))
+            break 
+        if (unique_files[begin]+(pic)) == files2[begin2]:
+            files4.append(unique_files[begin]+(pic))
+            files2.remove(unique_files[begin]+(pic))
+            break 
+        begin2 = begin2 + 1
+        if begin2 == (len(files2)): 
+            begin2 = begin2 - 1
+    
+
+#Sick, so now we need to move Files4 to a junk folder. 
+b = 0
+for x in range (len(files4)): 
+    source = files4[b]
+    destination = '######REDACTED#####'
+    new_path = shutil.move(source, destination)
+    b = b + 1
+
+#And now, repeat that same move for all the reamining of those 450 files. 
+b = 0
+for x in range (len(files2)): 
+    source = files2[b]
+    destination = '######REDACTED#####'
+    new_path = shutil.move(source, destination)
+    #print(new_path)
+    b = b + 1
+   
+#Let's add the .txt documuent information to the remainder for later use. 
+
+
+#Set files2 to the new file path in Sorted_2
+files2 = []
+for dirname, dirnames, filenames in os.walk('######REDACTED#####'):
+    # print path to all subdirectories first.
+    for subdirname in dirnames:
+        files2.append(os.path.join(dirname, subdirname))
+
+    # print path to all filenames.
+    for filename in filenames:
+        files2.append(os.path.join(dirname, filename))
+
+
+
+
+
+######################### Add the files to a dictionary/table ################################
+rows, cols = (((len(files2))//2), 2)
+matrixA = [[0 for i in range(cols)] for j in range(rows)]
+a = int(0)
+b=int(0)
+c = int(0)
+d = int(0)
+#int c is set to 1 because you can't subtract 0 
+#this line below is meant to capture just the first file in the directory
+#matrixA[0][0] = (files[0])
+#matrixA[0][1] = (files[0][-3:])
+#matrixA[0][2] = ((files[0][-12:-4]))
+
+for x in range (len(files2)):
+    if ((files2[a][-3:]) == "txt"):
+        filename = PureWindowsPath(files2[a])
+        correct_path = Path(filename)
+        with open(correct_path, 'r', encoding = "utf-16-le") as f:
+            contents = f.read()
+            matrixA[b][1] = (contents)
+            c = True
+    if ((files2[a][-3:]) == "png"):
+        matrixA[b][0] = (files2[a])
+        d = True 
+
+    if ((c == True)&(d ==  False)): 
+        
+        a = a + 1
+    if ((c == False)&(d ==  True)): 
+        
+        a = a + 1
+    if ((c == True)&(d ==  True)): 
+        
+        b = b + 1 
+        a = a + 1
+        c = False
+        d = False
+
+
+###########Record any of the .pngs with the tag of LF and then move them to sorted 3's appropriate user folder ################################
+a = -1
+files5 = []
+for W in matrixA: 
+    a = a + 1
+    if "LF" in matrixA[a][1]:
+        files5.append(matrixA[a][0])
+        
+    if a == (len(matrixA)): 
+        a = a - 1 
+
+
+b = 0
+for x in range (len(files5)): 
+    source = files5[b]
+    destination = '######REDACTED#####'
+    new_path = shutil.move(source, destination)
+    #print(new_path)
+    b = b + 1
+
+endTime = datetime.now()
+
+print(endTime-startTime)
+print("finished")
+
+
+
+
+
+
+#Some Variable Clarification#
+#files = all files in the directory
+#files2 = 450 of those files
+#files3 = 450 files w/0 extension name
+#unique_files = the files that dont have a .txt and .png with the same ID
+#files4 = the files w/0 a txt or png and their file paths for removal
+#matrixA = A picture and text descrption of the applications being used. 
+#Files5 = the files with laserfiche in them, used to move them to Sorted_3
+
+
+2C: Now train a model based on the new data
+import numpy as np
+import os
+import PIL
+import PIL.Image
+import tensorflow as tf
+from tensorflow.python.framework.ops import internal_name_scope_v1
+from datetime import datetime #I prefer this module for Python3
+import matplotlib.pyplot as plt
+import tempfile
+from tensorflow import keras
+from tensorflow.keras import layers
+from tensorflow.keras.models import Sequential
+
+#Note how much I can cut out of this!
+
+start_time = datetime.now()
+batch_size = 32
+img_height = 480
+img_width = 1230
+
+train_dir = 'E:/Sandbox/LaserficheOpenVersusClosed/Data_Training/Train/'
+train_ds = tf.keras.utils.image_dataset_from_directory(
+  train_dir,
+  validation_split=0.9, #Changed from .2 to .9, .2 gives 95% accuracy on one epoch. .9 Gives 92% Confidence. 
+  subset="training",
+  seed=123,
+  #Not including shuffle just since my test images aren't included in either batch. Not much better results. 
+  image_size=(img_height, img_width),
+  batch_size=batch_size)
+
+class_names = train_ds.class_names
+print(class_names)
+
+num_classes = 2
+ 
+model = keras.models.load_model('E:\\Sandbox\\LaserficheIDLoginPage\\Code\\whole_saved_model\\test.h5')
+history = model.fit
+
+#Now time to run this thing. 
+print("GPU GO BRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR")
+
+
+
+
+#Ok so now that the model is looking good, I'm going to try this against my test data. 
+testdata_path = 'E:/Sandbox/LaserficheOpenVersusClosed/Data_Training/Test/'
+Is = []
+Is_Not = []
+
+for i in os.listdir(testdata_path):
+  img = tf.keras.utils.load_img(testdata_path+ '//' + i, target_size=(img_height, img_width))
+  img_array = tf.keras.utils.img_to_array(img)
+  img_array = tf.expand_dims(img_array, 0) # Create a batch
+
+  predictions = model.predict(img_array)
+  score = tf.nn.softmax(predictions[0])
+ 
+  a = (class_names[np.argmax(score)])
+  if a == 'Is_Laserfiche':
+    Is.append(i)
+  if a == 'Is_Not_Laserfiche':
+    Is_Not.append(i)
+
+end_time = datetime.now()
+print('Duration: {}'.format(end_time - start_time))
+print("Is")
+print((len(Is)))
+
+print("Is not")
+print((len(Is_Not)))
+
+2D: ok so now... use that model to ID the LF Window
+import numpy as np
+import os
+import PIL
+import PIL.Image
+import tensorflow as tf
+from tensorflow.python.framework.ops import internal_name_scope_v1
+from datetime import datetime #I prefer this module for Python3
+import matplotlib.pyplot as plt
+import tempfile
+from tensorflow import keras
+from tensorflow.keras import layers
+from tensorflow.keras.models import Sequential
+
+#This version is to identify when newfollowup folder is opened
+
+print(tf.__version__)
+
+#This is a different method than V1, which utilizes more native .TS libraries and less keras utilities for optomization reasons
+
+start_time = datetime.now()
+batch_size = 32
+img_height = 480 #480 #595 #810
+img_width = 1230 #1230 #1000 #482
+                      #These are the aspect ratios that seem to work just fine, trying to get a balance on a peruser basis is difficult but :3
+
+train_dir = 'E:/Sandbox/LaserficheOpenVersusClosed/Data_Training/Train/'
+train_ds = tf.keras.utils.image_dataset_from_directory(
+  train_dir,
+  validation_split=0.9, #Changed from .2 to .9, .2 gives 95% accuracy on one epoch. .9 Gives 92% Confidence. 
+  subset="training",
+  seed=123,
+  #Not including shuffle just since my test images aren't included in either batch. Not much better results. 
+  image_size=(img_height, img_width),
+  batch_size=batch_size)
+
+val_dir = 'E:/Sandbox/LaserficheOpenVersusClosed/Data_Training/Validate/'
+val_ds = tf.keras.utils.image_dataset_from_directory(
+  val_dir,
+  validation_split=0.9, #Changed from .2 to .9, .2 gives 95% accuracy. 
+  subset="validation",
+  seed=123, #This is crucial for getting consistent results, think of minecraft chunk loading. 
+  image_size=(img_height, img_width),
+  batch_size=batch_size)
+
+
+class_names = train_ds.class_names
+print(class_names)
+
+#Heres the first 9 images from the training set. 
+import matplotlib.pyplot as plt
+
+plt.figure(figsize=(10, 10))
+for images, labels in train_ds.take(1):
+  for i in range(9):
+    ax = plt.subplot(3, 3, i + 1)
+    plt.imshow(images[i].numpy().astype("uint8"))
+    plt.title(class_names[labels[i]])
+    plt.axis("off")
+
+#Set the RGB values to be between 0-1 instead of 0-255
+normalization_layer = tf.keras.layers.Rescaling(1./255)
+
+#Keep the images in memory for each epoch, makes sure that the dataset isn't a bottleneck as it's being rerieved from memory. Also
+#operlap the data prepoprocessing and model execution whilst training the model. (Multitask)
+AUTOTUNE = tf.data.AUTOTUNE
+
+train_ds = train_ds.cache().prefetch(buffer_size=AUTOTUNE)
+val_ds = val_ds.cache().prefetch(buffer_size=AUTOTUNE)
+
+#Train the model using the Sequential model. 
+
+num_classes = 2
+
+#Adding data augmentation to the model, so that there can be more training models. 
+data_augmentation = keras.Sequential(
+  [
+    layers.RandomFlip("horizontal",
+                      input_shape=(img_height,
+                                  img_width,
+                                  3)),
+    layers.RandomRotation(0.1),
+    layers.RandomZoom(0.1),
+  ]
+)
+
+
+model = Sequential([
+  data_augmentation,
+  layers.Rescaling(1./255),
+  layers.Conv2D(16, 3, padding='same', activation='relu'),
+  layers.MaxPooling2D(),
+  layers.Conv2D(32, 3, padding='same', activation='relu'),
+  layers.MaxPooling2D(),
+  layers.Conv2D(64, 3, padding='same', activation='relu'),
+  layers.MaxPooling2D(),
+  layers.Dropout(0.2),
+  layers.Flatten(),
+  layers.Dense(128, activation='relu'),
+  layers.Dense(num_classes)
+])
+
+#print(model.summary())
+
+#Lets load the wieghts from the previous model so that this can be trained further. I saved
+#originally with just 1 epoch, and then reran that saved weight with 4 epochs after reload. Giving me higher accuracy. Pretty neat. 
+
+#model.load_weights('E:\\Sandbox\\LaserficheIDLoginPage\\Code\\saved_model\\')
+
+
+#Trying out the adam optimizer, also passing metrics to be able to have those 
+model.compile(
+  optimizer='adam',
+  loss=tf.losses.SparseCategoricalCrossentropy(from_logits=True),
+  metrics=['accuracy'])
+
+
+
+#Now time to run this thing. 
+print("GPU GO BRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR")
+epochs = 5 #5 is giving me 99% accuracy, with only incorrectly classifying a single image. 
+history = model.fit( #You can use a custom trianing model instead of model.fit, try this tutorial I found: https://www.tensorflow.org/api_docs/python/tf/keras/Model#fit
+  train_ds,
+  validation_data=val_ds,
+  epochs=epochs
+)
+
+
+#Here's how I will save the model 
+#model.save_weights('E:\\Sandbox\\LaserficheIDLoginPage\\Code\\saved_model\\') #This will save the model weights to the ('_File program Directory/saved_model/') folder.
+#print("Model is saved") #Note that this does overwrite the wieghts in that model. 
+
+#This is the whole model. 
+model.save('E:\\Sandbox\\LaserficheIDLoginPage\\Code\\whole_saved_model\\TravisModel.h5', overwrite=True, save_format='h5') #Note that you have to save in h5 format if you use the keras data
+#augmentation, this is an error in Tensorflow 2.7 
+print("Whole damn model is now saved")
+
+
+#Now lets visualize the results. 
+acc = history.history['accuracy']
+val_acc = history.history['val_accuracy']
+
+loss = history.history['loss']
+val_loss = history.history['val_loss']
+
+epochs_range = range(epochs)
+
+plt.figure(figsize=(8, 8))
+plt.subplot(1, 2, 1)
+plt.plot(epochs_range, acc, label='Training Accuracy')
+plt.plot(epochs_range, val_acc, label='Validation Accuracy')
+plt.legend(loc='lower right')
+plt.title('Training and Validation Accuracy')
+
+plt.subplot(1, 2, 2)
+plt.plot(epochs_range, loss, label='Training Loss')
+plt.plot(epochs_range, val_loss, label='Validation Loss')
+plt.legend(loc='upper right')
+plt.title('Training and Validation Loss')
+plt.show()
+
+
+
+
+
+
+
+
+
+
+
+#Ok so now that the model is looking good, I'm going to try this against my test data. 
+testdata_path = 'E:/Sandbox/LaserficheOpenVersusClosed/Data_Training/Test/'
+Is = []
+Is_Not = []
+
+for i in os.listdir(testdata_path):
+  img = tf.keras.utils.load_img(testdata_path+ '//' + i, target_size=(img_height, img_width))
+  img_array = tf.keras.utils.img_to_array(img)
+  img_array = tf.expand_dims(img_array, 0) # Create a batch
+
+  predictions = model.predict(img_array)
+  score = tf.nn.softmax(predictions[0])
+  #print(
+    #"This image most likely belongs to {} with a {:.2f} percent confidence."
+    #.format(class_names[np.argmax(score)], 100 * np.max(score)))
+  #print (i)
+  a = (class_names[np.argmax(score)])
+  if a == 'Is_Laserfiche':
+    Is.append(i)
+  if a == 'Is_Not_Laserfiche':
+    Is_Not.append(i)
+
+
+
+
+
+end_time = datetime.now()
+print('Duration: {}'.format(end_time - start_time))
+print("Is")
+print((len(Is)))
+
+print("Is not")
+print((len(Is_Not)))
+
+
+
+
+#This gives a better score than the priors, up to 99% ! Just by optomizing the seed, the layers, and epochs. Not much changed, but honestly that 
+#Is only since I didn't record the 2 hours of tweaking various other modesl I did. loggin off.
+
+
+
+
+
+
+#Here is a list of links I found useful to use as a reference for this code.
+: 
+
+#1. https://www.tensorflow.org/tutorials/load_data/images#using_tfdata_for_finer_control #Creating custom data input pipeline
+#2. https://www.tensorflow.org/tutorials/images/classification#compile_the_model #Image classification compiling 
+#3. https://www.tensorflow.org/api_docs/python/tf/keras/Model#fit Library terms and defs. 
+#4. https://www.tensorflow.org/guide/keras/sequential_model Sequential Model fitting 
+
+
+3. Can't show this due to privacy concerns, but you should be able to guess where the data goes from here. 
