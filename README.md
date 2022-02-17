@@ -3,9 +3,9 @@
 <br>
 💻🔨🔨
 <br>
-</h1>
 
-<p1> Note that this is still very much a work in progress! Last updated 2/8/22</p1> 
+
+<p1>Welcome to my CV, this is intended to give an overview of my technical experiences and knowledge background.</p1> 
 
 
 
@@ -23,32 +23,50 @@
 [Email](mailto:ejakehaskamp@gmail.com) | [GitHub](https://run4evers.github.io/Curriculum-Vitae/)
 <br><br>  
 
-<h3>Biggest Projects</h3>
+<h3>Recent Projects</h3>
   <br>Machine Learning  </br>
-  <br>Custom C++ Firmware  </br>
   <br>Screen Capture software with Powershell </br>
-  <br>Inventory Management Design and Implementation  </br>
+  <br>Updating a PC on a timer with Powershell </br>
 <br><br>  
 
-<h3>Technical Experiences</h3>
-  <br>Junoir Network Administrator: 3 Years (2019-Present) </br>
-  <br>Comprehensive Medical Management</br>
-  <b>IT HelpDesk: 1 Year</b>
-  <b>Riverside Technologies</b>
+<h3>Work History</h3>
+  <br>Junoir Network Administrator| Comprehensive Medical Management | 3 Years (2019-Present) </br>
+  
+    Here I started off in HelpDesk Administration and gradually moved into my current position which is focused primarily on Automation using Python, and Power Automate. I also am leading a project which utilizes Tensorflow to optomize employee workload, and predict future worker capacities. 
+  
+  
+  <b>IT HelpDesk: 1 Year | Riverside Technologies</b>
+  
 <br><br>  
+
+<h3>Software and Programming Knowledge</h3>
+  <br>Python2.0 / 3.0 | Intermediate Level </br>
+  <br>C# | Beginner Level (ongoing)</br>
+  <br>HTML, JAVA | Intermediate</br>
+  <br>MIT APP Builder (see here for the apps I've built<br>
+  <br>Arduino IDE | Expert (similar to C/C++)<br>
+
+<h3>Other Skillsets</h3>
+  <br>Japanese: JLPT level 2  </br>
+  <br>Fusion 360 CAD & Simulation | Expert </br>
+  <br>Eagle By AutoDesk 360  | Expert </br>
+  <br>3D printing, CNC milling, and Resin Casting </br>
+<br><br>  
+   
+<br><br> 
 
 <h3>Certifications and Education</h3>
-  <br>.NET Application Development with C# </br>
- <br> Tensorflow for ML Applications by Google  </br>
-  <br>Python in RPA Development by Coursera </br>
-  <br>Power Automate by Microsoft </br>
+  <br>.NET Application Development with C# | Microsoft </br>
+ <br> Tensorflow for ML Applications | Google (ongoing class)</br>
+  <br>Python in RPA Development by | Coursera (ongoing class)</br>
+   
 <br><br>  
 
-<h3>Inventions and Patents</h3>
+<h3>Inventions and Provisional Patents</h3>
   <br>CoolAir - Patent Page upload pending </br>
-  <br>EQ - Quit Vape for Nicotine Addiction </br>
- <br> AirBox - Personal Cooling Device "Later beaten by Sony's Reon cooler"  </br>
- <br><br>
+  <br>EQ - Quit Vape for Nicotine Addiction Device & App </br>
+  <br> AirBox - Personal Cooling Device (Later beaten by Sony's Reon cooler  </br>
+  <br><br>
  
 <h3>Side Projects</h3>
  <br>3D printing Resin Molds  </br>
@@ -58,12 +76,7 @@
  <br>Attiny85 Development</br>
 <br><br>  
 
-<h3>Other Skillsets</h3>
-  <br>Japanese: JLPT level 2  </br>
-  <br> Fusion 360  </br>
-  <br>Eagle By AutoDesk 360  </br>
-  <br>PCB Design and assembly  </br>
-<br><br>  
+
 
 <h3>** News Apperances **</h3>
 [WNKY](https://www.wnky.com/students-with-ties-to-wku-create-own-tech-company) | [BG Daily](https://www.wnky.com/students-with-ties-to-wku-create-own-tech-company/) | [WKU_Herald](https://www.wnky.com/students-with-ties-to-wku-create-own-tech-company/)
