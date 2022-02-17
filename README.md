@@ -24,9 +24,10 @@
 <br><br>  
 
 <h3>Recent Projects</h3>
-  <br>Machine Learning  </br>
+[Machine Learning](https://github.com/Run4Evers/Curriculum-Vitae/blob/gh-pages/Tensorflow%20Code "Machine learning Code")
   <br>Screen Capture software with Powershell </br>
-  <br>Updating a PC on a timer with Powershell </br>
+  [I'm an inline-style link](https://www.google.com)
+  <br>Updating a PC on a timer with Powershell (https://github.com/Run4Evers/Curriculum-Vitae/blob/gh-pages/Update_Windows "Powershell Code")</br>
 <br><br>  
 
 <h3>Work History</h3>
