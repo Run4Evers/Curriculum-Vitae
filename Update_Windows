@@ -1,0 +1,31 @@
+Set-Variable -Name "filepath" -Value ($env:UserName)
+Set-Variable -Name "filepath2" -Value (".txt")
+Set-Variable -Name "filepath3" -Value ("a")
+Set-Variable -Name "b" -Value ("User Not Connected TO VPN")
+if (Get-Module -ListAvailable -Name PSWindowsUpdate) {
+}
+else {
+Install-Module -Name PSWindowsUpdate -Force
+}
+
+
+
+
+
+
+$start = Get-Date '09:00'
+$end = Get-Date '20:30'
+$current = Get-Date
+
+if ($start.TimeOfDay -le $current.TimeOfDay -and $end.TimeOfDay -ge $current.TimeOfDay) {
+if (Test-Connection CMMDC01 -Quiet) {
+
+Get-WindowsUpdate -AcceptAll -Install
+Start-Transcript -Path "\\cmmfs01\IT\WindowsUpdates\$filepath$filepath3$filepath2" -NoClobber
+Stop-Transcript
+
+}
+else {
+$b
+}
+}
