@@ -18,7 +18,7 @@
   <img width="200" src="https://github.com/Run4Evers/Curriculum-Vitae/blob/gh-pages/Coding.jpg" alt="Logo">
 </p>
 
-
+<b> Please go to https://github.com/Run4Evers/Curriculum-Vitae/blob/gh-pages/README.md for a better reading experience, CV is still in progress!</b>
 <br>
   
   <h3>Recent Projects</h3>
